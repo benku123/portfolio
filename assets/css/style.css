@@ -828,9 +828,8 @@ body.nav-active { overflow: hidden; }
    */
 
   .skills-wrapper {
-    display: grid;
-    grid-template-columns: 0.8fr 1fr;
-    gap: 40px;
+
+    gap: 10px;
   }
 
   .skills .btn { margin-block-end: 0; }
