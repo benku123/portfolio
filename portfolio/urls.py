@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import home
-
+from blog.views import *
+from django.conf import settings # 👈 "settigns.py" import
+from django.conf.urls.static import static # 👈 "static" import
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home, name="home")
 ]
+if settings.DEBUG: # 👈 현재 개발모드라면(DEBUG=True)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

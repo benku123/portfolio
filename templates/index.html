@@ -72,27 +72,23 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="#" class="navbar-link">Home</a>
+            <a href="{% url 'home' %}" class="navbar-link">Home</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Resume</a>
+            <a href="#service-id" class="navbar-link">Services</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Services</a>
+            <a href="#portfolio" class="navbar-link">Portfolio</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Portfolio</a>
+            <a href="#blog" class="navbar-link">Blog</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link">Blog</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link">Contact</a>
+            <a href="#Contact" class="navbar-link">Contact</a>
           </li>
 
         </ul>
@@ -134,7 +130,7 @@
 Java, with experience in teaching ”Advanced C” and a solid understanding of algorithms and data structures.
             </p>
 
-            <a href="#" class="btn has-before">
+            <a href="{% static 'KhalimbetovUlugbekResume.pdf' %}" class="btn has-before"  download>
               <span class="span">Download Porfolio</span>
 
               <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
@@ -153,7 +149,7 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
         - #SERVICE
       -->
 
-      <section class="service" aria-labelledby="service-label">
+      <section id="service-id" class="service" aria-labelledby="service-label">
         <div class="container">
 
           <div class="title-wrapper">
@@ -372,7 +368,7 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
         - #PORTFOLIO
       -->
 
-      <section class="portfolio" aria-labelledby="portfolio-label">
+      <section id="portfolio" class="portfolio" aria-labelledby="portfolio-label">
 
         <div class="title-wrapper container">
 
@@ -393,59 +389,24 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
         <div class="slider" data-slider>
 
           <ul class="slider-container" data-slider-container>
-
+            {% for portfolio in portfolios %}
             <li class="slider-item">
               <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
 
-                <img src="{% static '/images/portfolio-1.jpg' %}" width="600" height="600" loading="lazy" alt="portfolio"
+                <img src="{{ portfolio.img.url }}" width="600" height="600" loading="lazy" alt="portfolio"
                   class="img-cover">
 
                 <div class="card-content">
-                  <h3 class="h3 card-title">Lab. 001</h3>
+                  <h3 class="h3 card-title">{{ portfolio.title }}</h3>
 
-                  <p class="card-text">Website Design</p>
+                  <p class="card-text">{{ portfolio.description }}</p>
                 </div>
 
-                <a href="#" class="layer-link"></a>
+                <a href="{{ portfolio.url }}" class="layer-link"></a>
 
               </div>
             </li>
-
-
-
-            <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="{% static '/images/portfolio-5.jpg' %}" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Design Zoom</h3>
-
-                  <p class="card-text">Branding / Design</p>
-                </div>
-
-                <a href="#" class="layer-link"></a>
-
-              </div>
-            </li>
-
-            <li class="slider-item">
-              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
-
-                <img src="{% static '/images/portfolio-6.jpg' %}" width="600" height="600" loading="lazy" alt="portfolio"
-                  class="img-cover">
-
-                <div class="card-content">
-                  <h3 class="h3 card-title">Out Zone</h3>
-
-                  <p class="card-text">UX Design / Web App</p>
-                </div>
-
-                <a href="#" class="layer-link"></a>
-
-              </div>
-            </li>
+            {% endfor %}
 
           </ul>
 
@@ -473,7 +434,7 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
         - #BLOG
       -->
 
-      <section class="section blog" aria-labelledby="blog-label">
+      <section id="blog" class="section blog" aria-labelledby="blog-label">
         <div class="container">
 
           <p class="section-subtitle" id="blog-label">Recent Articles</p>
@@ -486,7 +447,7 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
-                  <img src="{% static '/images/blog-1.jpg' %}" width="700" height="470" loading="lazy"
+                  <img src="{% static '/images/img_1.png' %}" width="700" height="470" loading="lazy"
                     alt="Get Started With Tiktok Ads." class="img-cover">
                 </figure>
 
@@ -498,14 +459,13 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
                   </time>
 
                   <div>
-                    <h3 class="h3 card-title">Get Started With Tiktok Ads.</h3>
+                    <h3 class="h3 card-title">Python - Unpacking.</h3>
 
                     <p class="card-text">
-                      Phasellus et lacus suscipit congue nis in the miss mine one miss the drana risus in tincidunt
-                      ornare.
+                     In this mini tutorial we will go step by step to fully understand haw unpacking works in Python.
                     </p>
 
-                    <a href="#" class="btn has-before">
+                    <a href="https://medium.com/@benkuamv/python-unpacking-f7404d9738bf" class="btn has-before">
                       <span class="span">Read more</span>
 
                       <ion-icon name="arrow-forward"></ion-icon>
@@ -521,7 +481,7 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
               <div class="blog-card">
 
                 <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
-                  <img src="{% static '/images/blog-2.jpg' %}" width="700" height="470" loading="lazy"
+                  <img src="{% static '/images/img_3.png' %}" width="700" height="470" loading="lazy"
                     alt="UX in Ecommerce – 5 things to avoid." class="img-cover">
                 </figure>
 
@@ -533,14 +493,13 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
                   </time>
 
                   <div>
-                    <h3 class="h3 card-title">UX in Ecommerce – 5 things to avoid.</h3>
+                    <h3 class="h3 card-title">Jupyter Notebooks boost.</h3>
 
                     <p class="card-text">
-                      Phasellus et lacus suscipit congue nis in the miss mine one miss the drana risus in tincidunt
-                      ornare.
+                     discovered Jupyter Notebooks a few months ago when I got serious about machine learning.
                     </p>
 
-                    <a href="#" class="btn has-before">
+                    <a href="https://medium.com/@benkuamv/jupyter-notebooks-boost-4006e074afae" class="btn has-before">
                       <span class="span">Read more</span>
 
                       <ion-icon name="arrow-forward"></ion-icon>
@@ -561,31 +520,18 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
   </main>
 
 
-
-<main>
+<main id="Contact">
             <div class="title">Contact us</div>
             <div class="title-info">We'll get back to you soon!</div>
 
-            <form action="" method="" class="form">
-                <div class="input-group">
-                    <input type="text" name="first_name" id="first-name" placeholder="First name">
-                    <label for="first-name">First name</label>
-                </div>
-
-                <div class="input-group">
-                    <input type="text" name="last_name" id="last-name" placeholder="Last Name">
-                    <label for="last-name">Last name</label>
-                </div>
-
-                <div class="input-group">
-                    <input type="email" name="e-mail" id="e-mail" placeholder="e-mail">
-                    <label for="e-mail">e-mail</label>
-                </div>
-
-                <div class="textarea-group">
-                    <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
-                    <label for="message">Message</label>
-                </div>
+            <form action="/" method="post" class="form">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="input-group">
+                        {{ field.label }}
+                        {{ field }}
+                    </div>
+                {% endfor %}
 
                 <div class="button-div">
                     <button type="submit">Send</button>
@@ -593,9 +539,7 @@ Java, with experience in teaching ”Advanced C” and a solid understanding of 
             </form>
         </main>
 
-  <!-- 
-    - #FOOTER
-  -->
+
 
   <footer class="footer">
     <div class="container">
