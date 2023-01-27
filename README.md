@@ -1,14 +1,10 @@
 <div align="center">
-
   <br />
   <br />
-
   <h2 align="center">Personal Portfolio Website</h2>
+A fully responsive personal portfolio website, built using HTML, CSS, and JavaScript, designed to be accessible on all devices.
 
-  A fully responsive personal portfolio website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
-
-  <a href="#"><strong>➥ Live Demo</strong></a>
-
+<a href="#"><strong>➥ View Live Demo</strong></a>
 </div>
 
 <br />
@@ -20,9 +16,9 @@ Before you begin, ensure you have met the following requirements:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
-### Run Locally
+### Running the Application Locally
 
-To run **Pfolio** locally, run this command on your git bash:
+To run **Portfolio** locally, run this command on your git bash:
 
 Linux and macOS:
 
@@ -35,6 +31,7 @@ Windows:
 ```bash
 git clone https://github.com/benku123/portfolio.git
 ```
+Once the repository is cloned, navigate to the project directory and start a local server to view the application in your browser.
 
 ### License
 
