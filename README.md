@@ -1,8 +1,6 @@
 <div align="center">
-
   <br />
   <br />
-
   <h2 align="center">Personal Portfolio Website</h2>
   <img src="static/images/logo.jpg">
 
@@ -14,28 +12,34 @@
 
 <br />
 
-
 ### Prerequisites
+There are two branches for front-end, where is only <i>html, css, javascript</i>, and Back-end where i used <b>Django</b>
 
 Before you begin, ensure you have met the following requirements:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
-### Run Locally
+### Running the Application Locally
 
-To run **Pfolio** locally, run this command on your git bash:
+To run **Portfolio** locally, run this command on your git bash:
 
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/pfolio.git
+sudo git clone https://github.com/benku123/portfolio.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/pfolio.git
+git clone https://github.com/benku123/portfolio.git
 ```
+Once the repository is cloned, navigate to the project directory and start a local server to view the application in your browser.
+
+### Python Prerequisites
+
+Download requirements.txt 
+```pip install -r requirements.txt```
 
 ### License
 
