@@ -13,7 +13,7 @@ def home(request):
             message  = form.cleaned_data["message"]
             send_mail('The contact form subject',
                       message + name,
-                      "benkuamv@gmail.com", [email], fail_silently=False )
+                      "youremail@gmail.com", [email], fail_silently=False )
             return redirect("home")
     context = Portfolio.objects.all()
     return render(request, "index.html", {"portfolios": context, "form": form})
