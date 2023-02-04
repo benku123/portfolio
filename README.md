@@ -4,10 +4,11 @@
   <br />
 
   <h2 align="center">Personal Portfolio Website</h2>
+  <img src="static/images/logo.jpg">
 
   A fully responsive personal portfolio website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-  <a href="#"><strong>➥ Live Demo</strong></a>
+  <a href="https://khalimbetovulugbek.com/"><strong>➥ Live Demo</strong></a>
 
 </div>
 

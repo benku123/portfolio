@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'blog',
 ]
 
@@ -123,17 +124,15 @@ STATICFILES_DIRS = [
 ]
 
 # Base url to serve media files
-MEDIA_URL = '/static/images/uploads/'
+MEDIA_URL = '/media/'
 # Path where media is stored
-MEDIA_ROOT = '/static/images/uploads/'
+MEDIA_ROOT = 'media/uploads'
 
-if DEBUG:
-    MEDIA_URL = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_HOST = "smtp"
+
 
